@@ -3,7 +3,6 @@
 import { useMobile } from "@/hooks/is-mobile";
 import "client-only";
 import AcordionItem from "./acordion-item";
-import { ReactNode } from "react";
 import Separator from "@/components/separator";
 import { cn } from "@/lib/styles";
 
