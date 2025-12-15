@@ -1,5 +1,7 @@
-import { cn } from "@/lib/styles";
 import { useState } from "react";
+import Image from "next/image";
+
+import { cn } from "@/lib/styles";
 
 export default function AcordionItem({
   title,
@@ -23,7 +25,7 @@ export default function AcordionItem({
         <h2 className="text-start text-sm tracking-tight text-surface-text font-bold">
           {title}
         </h2>
-        <img
+        <Image
           src={expanded ? "/icon-minus.svg" : "/icon-plus.svg"}
           alt="Toggle acordion item button"
           className="size-8"

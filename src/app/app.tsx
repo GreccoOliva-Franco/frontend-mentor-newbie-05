@@ -1,10 +1,13 @@
 "use client";
 
-import { useMobile } from "@/hooks/is-mobile";
 import "client-only";
-import AcordionItem from "./acordion-item";
-import Separator from "@/components/separator";
+import Image from "next/image";
+
 import { cn } from "@/lib/styles";
+import Separator from "@/components/separator";
+import { useMobile } from "@/hooks/is-mobile";
+
+import AcordionItem from "./acordion-item";
 
 interface Faq {
   title: string;
@@ -34,7 +37,7 @@ export default function App() {
 
   return (
     <main className="relative bg-background/10">
-      <img
+      <Image
         src={
           isMobile
             ? "/background-pattern-mobile.svg"
@@ -46,7 +49,7 @@ export default function App() {
       <div className="z-1 flex flex-col h-screen justify-center items-center p-8">
         <section className="flex flex-col max-w-md p-6 gap-6 rounded-lg bg-surface">
           <div className="flex items-center min-h-7xl gap-6">
-            <img src={"/icon-star.svg"} alt="Star icon" className="size-6" />
+            <Image src={"/icon-star.svg"} alt="Star icon" className="size-6" />
             <h1
               className={cn(
                 "text-3xl font-bold text-surface-text",
